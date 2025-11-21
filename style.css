@@ -1,0 +1,1731 @@
+/*
+Theme Name: HPI
+Theme URI: https://www.streamteam.com/ 
+Author: SourcingUp
+Author URI: https://www.sourcingup.com/
+Description: A custom theme for HPI.
+Version: 3.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mi-tema
+*/
+
+
+/************************/
+/****   Fonts    *****/
+/************************/
+@font-face {
+    font-family: 'Impact';
+    src: url('fonts/impact.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kulturista';
+    src: url('fonts/Kulturista-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kulturista';
+    src: url('fonts/Kulturista-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('fonts/Aileron-Regular.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('fonts/Aileron-Bold.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/************************/
+/****   Generals    *****/
+/************************/
+body {
+    margin: 0;
+    background: #0E0E0E;
+}
+/* Esto son para los modales de img */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/**********/
+/* Header */
+#header {
+    position: relative;
+    border-bottom: 1px solid #4a0009;
+}
+.header-fixed {
+  position: fixed!important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+#header .Mainheader {
+    margin: 0 auto;
+    max-width: 1650px;
+    padding: 14px 0;
+    align-items: center !important;
+    width: 90%;
+    height: 95px;
+}
+#header .Mainheader figure {
+    margin: 0!important;
+}
+#header .Mainheader .logoheaders img {
+    width: auto !important;
+    object-fit: cover;
+    height: 108px;
+}
+#header #menu-main-menu {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    justify-content: end;
+    list-style-type: none;
+}
+#header #menu-main-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 21px;
+    line-height: 20px;
+}
+#header #menu-main-menu a[aria-current="page"] {
+    color: #BC0E0D!important;
+}
+#header .contentHeaderNabButton {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    justify-content: end;
+}
+#header .contentHeaderNabButton .mainbuttonheadercontent .wp-block-group__inner-container {
+    display: flex;
+    gap: 3px;
+    transition: transform 0.2s ease;
+}
+#header .contentHeaderNabButton .mainbuttonheadercontent svg {
+    width: 18px;
+    height: 15px;
+    background: #BC0E0D;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+#header .contentHeaderNabButton .mainbuttonheadercontent .buttonOrdersHeader a {
+    background: #BC0E0D;
+    padding: 10px 20px;
+    border-radius: 0px;
+    font-size: 17px;
+    line-height: 12px;
+    font-family: "Kulturista", serif;
+    border-radius: 10px;
+	font-weight: 600;
+}
+#header .contentHeaderNabButton .mainbuttonheadercontent .wp-block-group__inner-container:hover {
+    transform: scale(1.1);
+}
+#header .contenthamburgersicons {
+    display: none;
+}
+/**********/
+/* Footer */
+#footer {
+    border-top: 1px solid #4a0009;
+}
+#footer .ContentFooter {
+    padding: 40px 0 40px;
+}
+#footer .MainFooter .footerlogo img {
+    width: auto;
+    height: 110px;
+}
+#footer .MainFooter {
+    margin: 0 auto;
+    max-width: 1650px;
+    align-items: center !important;
+    width: 90%;
+    gap: 10px;
+}
+#footer .MainFooter.MainFootersTwo {
+    align-items: start!important;
+    margin-top: 15px;
+}
+/* Meenu */
+#footer #menu-main-menu-1, #footer #menu-main-menu-2 {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    justify-content: end;
+    list-style-type: none;
+	padding: 0px;
+}
+#footer #menu-main-menu-1 a, #footer #menu-main-menu-2 a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+}
+#footer #menu-main-menu-1 a[aria-current="page"], #footer #menu-main-menu-2 a[aria-current="page"] {
+    color: #BC0E0D!important;
+}
+
+/* Contenido 2 */
+#footer .TitleFooter {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+#footer .TextFooter {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+#footer .viewmenumovilfooter {
+    display: none;
+}
+
+#footer .contentcopyright .wp-block-social-links {
+    margin: 0 0 10px;
+}
+#footer .contentcopyright p {
+    font-family: "Aileron", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+#footer .contentcopyright .copyrightcontent  {
+    font-size: 12px;
+    line-height: 15px;
+}
+    
+
+/*******************************/
+/**** General modifications ****/
+/*******************************/
+/* Hero*/
+.HeroSubPage {
+    position: relative;
+}
+.HeroSubPage img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.HeroSubPage .contentHero {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+.HeroSubPage .contentHero h1 {
+    font-family: "Impact", serif;
+    font-size: 135px;
+    margin: 0;
+    color: #fff;
+}
+/* SubTitle Page */
+.contentSubPageGeneric {
+    max-width: 1650px;
+    width: 75%;
+    margin: 100px auto;
+}
+.contentSubPageGeneric .subtitlepageGeneric {
+    font-family: 'Kulturista', serif;
+    font-size: 54px;
+    line-height: 46px;
+    color: #fff;
+    font-weight: bold;
+}
+.contentSubPageGeneric .subsTitlePageGeneric {
+    font-family: 'Kulturista', serif;
+    font-size: 40px;
+    line-height: 44px;
+    color: #fff;
+    margin: 0;
+}
+.prev-btn, .next-btn {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.prev-btn:hover, .next-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/*****************/
+/*** Hero Page ***/
+/*****************/
+/* Hero Section */
+.HomeHeroPage {
+    max-width: 100%;
+} 
+.HomeHeroPage .slick-slide img {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+.HomeHeroPage .CotentBannerItems {
+    position: relative;
+}
+.HomeHeroPage .CotentBannerItems .contentHero {
+    position: absolute;
+    z-index: 10;
+    bottom: 5%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px 72px 20px 23px;
+    background: #ffffffa8;
+    gap: 8px;
+    min-width: 642px;
+    min-height: 170px;
+}
+
+.HomeHeroPage .CotentBannerItems .contentHero .custom-pagination {
+    display: flex;
+    gap: 5px;
+}
+.HomeHeroPage .CotentBannerItems .contentHero .custom-pagination button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+}
+
+.HomeHeroPage .CotentBannerItems .contentHero .cls-1 {
+    fill: none;
+    stroke: #bc0e0d;
+    stroke-miterlimit: 10;
+    stroke-width: 4.58px;
+}
+.HomeHeroPage .CotentBannerItems .contentHero h1 {
+    font-family: 'Kulturista', sans-serif;
+    font-size: 54px;
+    line-height: 46px;
+    font-weight: bold;
+    color: #BC0E0D;
+    margin: 0;
+    padding-left: 30px;
+}
+/* Learn More */
+.HomePage .learnMore {
+    background: #BC0E0D;
+    padding: 80px 0 40px;
+    margin-top: 30px;
+}
+.HomePage .learnMore .mainlearnMore {
+    margin: 0 auto;
+    max-width: 1650px;
+    width: 95%;
+}
+.HomePage .learnMore .mainlearnMore h4 {
+    font-family: 'Impact', sans-serif;
+    font-size: 148px;
+    line-height: 118px;
+    margin: 0;
+}
+.HomePage .learnMore .mainlearnMore p {
+    font-family: 'Kulturista', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    margin: 0;
+}
+/* gallery */
+.HomePage .gallery {
+    margin: 180px 0;
+}
+.HomePage .gallery .contenido {
+    max-width: 1650px;
+    width: 95%;
+    margin: 0 auto;
+}
+.HomePage .gallery .contenido h4 {
+    font-family: 'Kulturista', sans-serif;
+    font-size: 54px;
+    color: #fff;
+    font-weight: bold;
+}
+.HomePage .gallery .contenido .contentgallery {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+    margin-top: 60px;
+}
+.HomePage .gallery .contenido .contentButtons {
+    display: flex;
+    gap: 20px;
+}
+.HomePage .gallery .contenido .contentButtons .linksgallery {
+    text-decoration: none;
+    color: #fff;
+    background: #BC0E0D;
+    font-family: 'Kulturista', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    padding: 12px 24px;
+    transition: transform 0.2s ease;
+}
+.HomePage .gallery .contenido .contentButtons .linksgallery:hover {
+    transform: scale(1.1); 
+}
+
+
+
+
+
+/* Seccion de Gallery */
+.HomePage .gallery .contentGallery {
+    display: grid;
+    gap: 1.5%;
+    width: 100%;
+    grid-template-columns: 17% 48% 32%;
+}
+.HomePage .gallery .contentGallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.HomePage .gallery .contentGallery .hovergalleryitems{
+    position: relative;
+}
+.HomePage .gallery .contentGallery .hovergalleryitems:hover .contenthovergalleryitem {
+    display: grid;
+    opacity: 1;
+}
+.HomePage .gallery .contentGallery .hovergalleryitems .contenthovergalleryitem {
+    display: none;
+    background: #bc0e0db8;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.HomePage .gallery .contentGallery .hovergalleryitems .contenthovergalleryitem p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+}
+.HomePage .gallery .contentGallery .hovergalleryitems .contenthovergalleryitem svg {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+/* 1 Parte */
+.HomePage .gallery .contentGallery .grouped-images {
+    display: grid;
+    gap: 20px;
+}
+/* 2 parte */
+.HomePage .gallery .contentGallery .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+/* 3 Parte */
+.HomePage .gallery .contentGallery .third-section {
+    display: grid;
+    gap: 20px;
+}
+.HomePage .gallery .contentGallery .third-section-group {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+/* Information Panels */
+.HomePage .infopanels {
+    margin: 0;
+    position: relative;
+}
+.HomePage .infopanels .slick-track {
+    padding: 89px 0px 180px;
+}
+.HomePage .infopanels .backgroundImagePanel {
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: bottom!important;
+    position: relative;
+
+    padding-top: 180px;
+    min-height: 1100px;
+    display: grid;
+    align-items: center;
+}
+.HomePage .infopanels .LogoPanelImage {
+    position: absolute;
+    right: 10%;
+    top: -71px;
+}
+.HomePage .infopanels .contentitemspanels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 44px;
+    max-width: 1650px;
+    width: 95%;
+    margin: 30px auto;
+    min-height: 641px;
+}
+.HomePage .infopanels .contentitemspanels .itemscontentitemspanels {
+    text-decoration: none;
+}
+.HomePage .infopanels .contentitemspanels .itemscontentitemspanels img {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 350px;
+    object-fit: cover;
+}
+.HomePage .infopanels .contentitemspanels .itemscontentitemspanels .titlespanels {
+    font-family: "Kulturista", sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+    color: #000;
+    margin: 20px 0;
+}
+.HomePage .infopanels .contentitemspanels .itemscontentitemspanels .contentpanels {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.HomePage .infopanels .ButtonsPrincipalPanel {
+    border-top: 1px solid #fff;
+}
+.HomePage .infopanels .mainButtonsPrincipalPanel {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1650px;
+    width: 95%;
+    margin: 0 auto;
+}
+.HomePage .infopanels .mainButtonsPrincipalPanel .linkpanelmain {
+    font-family: 'Kulturista', sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+.HomePage .infopanels .mainButtonsPrincipalPanel .linkpanelmain:hover {
+    transform: scale(1.1);
+}
+.HomePage .infopanels .mainButtonsPrincipalPanel .custom-pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.HomePage .infopanels .mainButtonsPrincipalPanel .custom-pagination button {
+    background: transparent;
+    border: none;
+}
+.HomePage .infopanels .mainButtonsPrincipalPanel .custom-pagination .cls-1 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 4.91px;
+}
+.HomePage .infopanels .contentMobilePaginations.custom-pagination {
+    display: none;
+}
+
+
+
+
+
+
+
+/**********************/
+/*** Materials Page ***/
+/**********************/
+/* Content*/
+.MaterialsContentSubPage .ListMaterials .itemListMaterials {
+    margin-bottom: 35px;
+}
+.MaterialsContentSubPage .ListMaterials .itemListMaterials p {
+    font-family: 'Kulturista', serif;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+    margin: 0;
+}
+.MaterialsContentSubPage .ListMaterials .itemListMaterials span {
+    font-family: 'Kulturista', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #CCCCCC;
+    margin: 0;
+}
+.MaterialsContentSubPage .contentMoreInfo p {
+    color: #CCCCCC;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+.MaterialsContentSubPage .contentMoreInfo a {
+    text-decoration: none;
+    color: #BC0E0D;
+}
+
+
+
+
+
+
+/**********************/
+/***  Services Page ***/
+/**********************/
+.ServicesPage .Services {
+    margin: 0 auto;
+    width: 98%;
+}
+.ServicesPage .Services .service-item a {
+    text-decoration: none;
+}
+.ServicesPage .Services .service-item h6 {
+    font-family: 'Kulturista', serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 44px;
+    color: #fff;
+    margin: 0;
+}
+/* Por Panels */
+.ServicesPage .Services .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+.ServicesPage .Services .services-grid .service-item {
+    display: grid;
+    gap: 20px;
+    background: #1A1A1A;
+    padding: 40px 60px;
+    align-items: start;
+}
+.ServicesPage .Services .services-grid .service-item .ContentItemsLinkServices {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+.ServicesPage .Services .services-grid .service-item .ContentItemsLinkServices img {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 337px;
+    object-fit: cover;
+}
+
+/* Full Panels */
+.ServicesPage .Services .service-full {
+    padding: 50px 150px;
+}
+.ServicesPage .Services .service-full .service-item {
+    display: flex;
+    gap: 20px;
+    background: #0E0E0E;
+    padding: 40px;
+}
+.ServicesPage .Services .service-full .service-item h6 {
+    font-size: 56px;
+    line-height: 60px;
+}
+/*Link*/
+.ServicesPage .Services .service-item .contentLinksItemServices {
+    display: flex;
+    gap: 3px;
+}
+.ServicesPage .Services .service-item .contentLinksItemServices a {
+    background: #BC0E0D;
+    padding: 10px 20px;
+    border-radius: 0px;
+    font-size: 20px;
+    line-height: 15px;
+    font-family: "Kulturista", serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s ease;
+    border-radius: 10px 0 0 10px;
+}
+.ServicesPage .Services .service-item .contentLinksItemServices svg {
+    width: 18px;
+    height: 15px;
+    background: #BC0E0D;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border-radius: 0 10px 10px 0;
+}
+.ServicesPage .Services .service-item .contentLinksItemServices a:hover, .ServicesPage .Services .service-item .contentLinksItemServices svg:hover {
+    transform: scale(1.1);
+}
+
+
+/***************************/
+/*** Single Service Page ***/
+/***************************/
+.SingleServicesPage {
+    margin: 86px 0;
+}
+/* Hero */
+.SingleServicesPage .HeroSingleServicesPage {
+    max-width: 1650px;
+    width: 90%;
+    margin: 0 auto 30px;
+}
+.SingleServicesPage .HeroSingleServicesPage h1 {
+    font-family: "Kulturista", serif;
+    color: #fff;
+    font-size: 55px;
+    margin: 0;
+}
+.SingleServicesPage .HeroSingleServicesPage a {
+    font-family: "Kulturista", serif;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+.SingleServicesPage .HeroSingleServicesPage a:hover {
+    transform: scale(1.02);
+}
+.SingleServicesPage .HeroSingleServicesPage a span {
+    background: #BC0E0D;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+.SingleServicesPage .HeroSingleServicesPage a svg {
+    width: 18px;
+    height: 20px;
+    background: #BC0E0D;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px 0 0 10px;
+}
+/* Content */ 
+.SingleServicesPage .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    max-width: 1650px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.SingleServicesPage .gallery .contenido {
+    grid-column: span 2;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    padding: 6px 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    line-height: 27px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.SingleServicesPage .gallery img {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 337px;
+    object-fit: cover;
+}
+/** Modal de Imagenes **/
+.SingleServicesPage .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 75%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, -50%);
+    padding: 20px 0;
+    z-index: 9999;
+    grid-template-rows: 8% 92%;
+}
+.SingleServicesPage .modal-content {
+    object-fit: cover;
+    height: 100%;
+}
+.SingleServicesPage .close {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.SingleServicesPage #prevImage, #nextImage {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.SingleServicesPage #prevImage { left: 100px; }
+.SingleServicesPage #nextImage { right: 100px; }
+.SingleServicesPage #darkbackground {
+    display: none;
+    background-color: #000000a8;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+.SingleServicesPage #modalImage {
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: auto;
+}
+
+
+
+
+
+
+
+
+
+/**********************/
+/*** Equipment Page ***/
+/**********************/
+.EquipmentContentSubPage .Equipment {
+    max-width: 1650px;
+    width: 90%;
+    margin: 60px auto 120px;
+}
+.EquipmentContentSubPage .Equipment .itemsEquipment {
+    background: #1A1A1A;
+    padding: 40px 90px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.EquipmentContentSubPage .Equipment .itemsEquipment h4 {
+    font-family: 'Kulturista', serif;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 20px;
+}   
+.EquipmentContentSubPage .Equipment .itemsEquipment .contentEquipment {
+    display: flex;
+    gap: 20px;
+}
+.EquipmentContentSubPage .Equipment .itemsEquipment .contentEquipment img {
+    border-radius: 15px;
+}
+.EquipmentContentSubPage .Equipment .itemsEquipment .contentEquipmentItems {
+    font-family: "Myriad Pro", sans-serif;    
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+}
+
+
+
+/**********************/
+/***    FAQ Page    ***/
+/**********************/
+.FAQContentSubPage .Questions {
+    max-width: 1650px;
+    margin: 100px auto;
+    width: 70%;
+}
+.FAQContentSubPage .Questions .itemsQuestions {
+    margin-bottom: 80px;
+}
+.FAQContentSubPage .Questions .itemsQuestions h4 {
+    font-family: "Kulturista", serif;
+    font-size: 45px;
+    line-height: 44px;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.FAQContentSubPage .Questions .itemsQuestions .contentQuestions h6 {
+    font-family: "Kulturista", serif;
+    font-size: 24px;
+    line-height: 29px;
+    color: #BC0E0D;
+    margin: 0;
+    scroll-margin-top: 100px;
+}
+.FAQContentSubPage .Questions .itemsQuestions .contentQuestions h6::before {
+    content: "";
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+  visibility: hidden;
+}
+
+.FAQContentSubPage .Questions .itemsQuestions .contentQuestions .contentQuestionsItems {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+}
+.FAQContentSubPage .Questions .itemsQuestions .contentQuestions .contentQuestionsItems a {
+    color: #2C9DE8;
+    text-decoration: none;
+}
+.FAQContentSubPage .Questions .itemsQuestions .contentQuestions .subAnswerItems {
+    margin-bottom: 30px;
+}
+.FAQContentSubPage .Questions .itemsQuestions .contentQuestions .subAnswerItems .subAnswerTitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+}
+.FAQContentSubPage .Questions .itemsQuestions .contentQuestions .subAnswerItems .subAnswercontent {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+
+
+
+/**********************/
+/***   About Page   ***/
+/**********************/
+.AboutContentSubPage .About {
+    max-width: 1650px;
+    width: 70%;
+    margin: 130px auto;
+}
+.AboutContentSubPage .About .TitleAbout {
+    font-family: "Kulturista", serif;
+    font-size: 56px;
+    line-height: 60px;
+    font-weight: bold;
+    color: #fff;
+}
+.AboutContentSubPage .About .subContentAbout {
+    font-family: "Kulturista", serif;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+    color: #fff;
+}
+.AboutContentSubPage .About .contentAbout {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+}
+.AboutContentSubPage .About .contentAbout ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+}
+.AboutContentSubPage .About .contentAbout a {
+    text-decoration: none;
+    color: #2C9DE8;
+}
+
+
+
+
+
+
+
+
+
+/**********************/
+/*** Gallery Page ***/
+/**********************/
+.GalleryContentSubPage .Gallery {
+    max-width: 1650px;
+    margin: 20px auto 60px;
+    width: 85%;
+}
+.GalleryContentSubPage .Gallery #gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.GalleryContentSubPage .Gallery #gallery img {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 337px;
+    object-fit: cover;
+}
+.GalleryContentSubPage .Gallery #loadMore {
+    text-align: center;
+    margin: 40px auto;
+    background: #BC0E0D;
+    color: #fff;
+    font-family: "Kulturista", sans-serif;
+    font-size: 25px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: none;
+}
+/* Modal de imagen */
+.GalleryContentSubPage .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 75%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, -50%);
+    padding: 20px 0;
+    z-index: 9999;
+    grid-template-rows: 8% 92%;
+}
+.GalleryContentSubPage .modal-content {
+    object-fit: cover;
+    height: 100%;
+}
+.GalleryContentSubPage .close {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.GalleryContentSubPage #prevImage, #nextImage {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.GalleryContentSubPage #prevImage { left: 100px; }
+.GalleryContentSubPage #nextImage { right: 100px; }
+.GalleryContentSubPage #darkbackground {
+    display: none;
+    background-color: #000000a8;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.GalleryContentSubPage #buttonslinksGallery {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.GalleryContentSubPage .gallery-link-button {
+    background: #333333;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.GalleryContentSubPage .gallery-link-button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.GalleryContentSubPage #modalImage {
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: auto;
+}
+
+
+
+
+/**********************/
+/*** Contacts Page ***/
+/**********************/
+/* Contenido */
+.ContactContentSubPage .mainContentContactPage {
+    display: grid;
+    grid-template-columns: 46% 51%;
+    gap: 20px;
+}
+.ContactContentSubPage .mainContentContactPage .firstpartcontentcontactPage p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'Kulturista', sans-serif;
+}
+.ContactContentSubPage .mainContentContactPage .firstpartcontentcontactPage p a {
+    text-decoration: none;
+    color: #2C9DE8;
+}
+.ContactContentSubPage .mainContentContactPage .firstpartcontentcontactPage p b {
+    font-size: 24px;
+    line-height: 29px;
+}
+/* Formulario */
+.contactsform p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+.contactsform p label {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+}
+.contactsform .nameInputForm .ContentInputNameForm spam p {
+    color: #BC0E0D;
+    display: grid;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.contactsform .nameInputForm .ContentInputNameForm {
+    display: flex;
+    gap: 20px;
+}
+.contactsform input, .contactsform textarea {
+    width: 100%;
+    padding: 8px 0;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+.contactsform .sendFormButtom p {
+    display: flex;
+    gap: 1px;
+}
+.contactsform .sendFormButtom input{
+    width: auto;
+    padding: 0 17px;
+    background: #BC0E0D;
+    color: #fff;
+    border: none;
+    font-family: 'Kulturista', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.contactsform .sendFormButtom .wpcf7-spinner {
+    order: 3;
+}
+.contactsform .sendFormButtom .custom-arrow {
+    display: flex;
+    background: #BC0E0D;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.contactsform .sendFormButtom .custom-arrow svg {
+    width: 17px;
+}
+.contactsform .sendFormButtom .custom-arrow:hover, .contactsform .sendFormButtom input:hover {
+    transform: scale(1.1);
+}
+.contactsform .wpcf7-response-output {
+    font-family: 'Kulturista', sans-serif;
+    color: #fff;
+}
+
+@media only screen and (max-width: 1441px) {
+    /** General modifications **/
+    .HeroSubPage .contentHero {
+        left: 2.3%;
+    }
+    .HeroSubPage .contentHero h1 {
+        font-size: 130px;
+    }
+
+    /** Hero page **/
+    .HomePage .learnMore .mainlearnMore h4 {
+        font-size: 142px;
+    }
+    /* Panels */
+    .HomePage .infopanels .contentitemspanels .itemscontentitemspanels .titlespanels {
+        font-size: 24px;
+        line-height: 24px;
+        margin: 10px 0;
+    }
+    .HomePage .infopanels .contentitemspanels .itemscontentitemspanels .contentpanels {
+        margin: 0;
+    }
+
+    /** Gallery **/
+    .GalleryContentSubPage .Gallery #gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media only screen and (min-width: 1282px) {
+    #header .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        flex-basis: auto;
+    }
+
+    #header #menu-main-menu {
+        display: flex!important;
+    }
+}
+@media only screen and (max-width: 1281px) {
+    /** General modifications **/
+    .HeroSubPage .contentHero h1 {
+        font-size: 110px;
+    }
+
+    /** Servicios **/
+    .ServicesPage .Services .services-grid .service-item {
+        padding: 40px;
+    }
+
+      /** Gallery **/
+    .GalleryContentSubPage .Gallery #gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+    /* HEader */
+    #header .Mainheader {
+        display: grid;
+        grid-template-columns: 20% 42% 38%;
+        text-align: center;
+        width: 100%;
+        gap: 0;
+    }
+    #header .Mainheader .logoheaders img {
+        height: 65px !important;
+    }
+    #header .contenthamburgersicons {
+        display: flex;
+        justify-content: center;
+    }
+    #header .contenthamburgersicons svg {
+        width: 23px;
+        cursor: pointer;
+    }
+    #header #menu-main-menu {
+        position: absolute;
+        background: #ffffffb8;
+        z-index: 99;
+        color: #000;
+        display: none;
+        width: 100%;
+        left: 0;
+        padding: 20px;
+        justify-content: center;
+        top: 100%;
+    }
+
+    #header .contentHeaderNabButton .mainbuttonheadercontent .buttonOrdersHeader a {
+        font-size: 13px;
+        line-height: normal;
+        padding: 8px 10px;
+        margin: 0;
+    }
+    #header .contentHeaderNabButton {
+        display: block!important;
+    }
+    #header .contentHeaderNabButton .mainbuttonheadercontent svg {
+        width: 18px;
+        height: 15px;
+        background: #BC0E0D;
+        padding: 7px;
+        cursor: pointer;
+    }
+    #header .contentHeaderNabButton .mainbuttonheadercontent .wp-block-group__inner-container {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /** Header **/
+    
+    #header .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+            flex-basis: auto!important;
+    }
+    
+
+
+   
+    #header #menu-main-menu a {
+        color: #000;
+    }
+    
+    
+    /** Footer **/
+    #footer {
+        text-align: center;
+    }
+    #footer .TitleFooter {
+        margin-top: 0;
+    }
+    #footer #menu-main-menu-1 { 
+        display: none
+    }
+    #footer .viewmenumovilfooter {
+        display: block;
+    }
+    #footer #menu-main-menu-2 {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        justify-content: center;
+        padding: 0;
+    }
+    #footer #menu-main-menu-1 a, #footer #menu-main-menu-2 a {
+        font-size: 16px;
+    }
+    #footer .contentcopyright .wp-block-social-links {
+        justify-content: center;
+    }
+
+
+    /** General modifications **/
+    /*Hero*/
+    .HeroSubPage img {
+        height: 100px;
+    }
+    .HeroSubPage .contentHero {
+        left: 7.3%;
+    }
+    .HeroSubPage .contentHero h1 {
+        font-size: 44px;
+    }
+    /*Sections*/
+    .contentSubPageGeneric {
+        width: 90%;
+        margin: 50px auto;
+    }
+    .contentSubPageGeneric .subtitlepageGeneric {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .contentSubPageGeneric .subsTitlePageGeneric {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+
+
+
+    /** Home Page **/
+    body:has(.HomePage) {
+        background-color: #1A1A1A;
+    }
+    /* Hero */
+    .HomeHeroPage .CotentBannerItems .contentHero {
+        padding: 10px;
+        min-width: 252px;
+        min-height: 70px;
+    }
+    .HomeHeroPage .CotentBannerItems .contentHero .custom-pagination button svg {
+        width: 20px;
+        height: 20px;
+    }
+    .HomeHeroPage .CotentBannerItems .contentHero h1 {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .HomePage .HomeHeroPage .slick-track {
+        height: 30vh;
+    }
+    .HomeHeroPage .slick-slide img {
+        height: 100%;
+    }
+    /* Info */
+    .HomePage .learnMore {
+        padding: 25px 0 35px;
+    }
+    .HomePage .learnMore .mainlearnMore h4 {
+        font-size: 37px;
+        line-height: 40px;
+    }
+    .HomePage .learnMore .mainlearnMore p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    /* Learn More */
+    .HomePage .gallery {
+        margin: 50px 0;
+    }
+    .HomePage .gallery .contenido h4 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .HomePage .gallery .contenido .contentgallery {
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 20px;
+    }
+    .HomePage .gallery .contenido .contentButtons {
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+    .HomePage .gallery .contenido .contentButtons .linksgallery {
+        width: 100%;
+        font-size: 17px;
+    }
+    /* panels*/
+    .HomePage .infopanels .backgroundImagePanel {
+        padding-top: 123px;
+        padding-bottom: 40px;
+    }
+    .HomePage .infopanels .LogoPanelImage {
+        top: -15px;
+        width: 79%;
+    }
+    .HomePage .infopanels .mainButtonsPrincipalPanel .custom-pagination {
+        display: none;
+    }
+    .HomePage .infopanels .contentitemspanels {
+        grid-template-columns: 1fr!important;
+        min-height: 1500px;
+    }
+    .HomePage .infopanels .mainButtonsPrincipalPanel .linkpanelmain {
+        font-size: 18px;
+        line-height: 22px;
+        width: 100%;
+    }
+    .HomePage .infopanels .contentMobilePaginations.custom-pagination {
+        display: block;
+        text-align: center;
+    }
+    .HomePage .infopanels .contentMobilePaginations.custom-pagination button {
+        background: none;
+        border: none;
+    }
+    .HomePage .infopanels .contentitemspanels .itemscontentitemspanels .contentpanels {
+        font-size: 15px;
+        line-height: 16px;
+    }
+    /*Gallery Home Section */
+    .HomePage .gallery .contentGallery {
+        grid-template-columns: 1fr!important;
+    }
+    .HomePage .gallery .contentGallery .grouped-images, .HomePage .gallery .contentGallery .third-section {
+        display: none;
+    }
+
+
+
+    /** Gallery Page **/
+    body:has(.GalleryContentSubPage) {
+        background-color: #1A1A1A;
+    }
+    .GalleryContentSubPage .modal {
+        height: 62%;
+    }
+    .GalleryContentSubPage .HeroGalleryPage h1 {
+        font-size: 44px;
+        line-height: 40px;
+    }
+    .GalleryContentSubPage .Gallery #gallery {
+        grid-template-columns: 1fr!important;
+    }
+    .GalleryContentSubPage .Gallery {
+        width: 100%;
+    }
+    .GalleryContentSubPage .Gallery #gallery img {
+        border-radius: 0;
+    }
+    .GalleryContentSubPage .modal-content {
+        width: 100%;
+        height: auto;
+    }
+    .GalleryContentSubPage #prevImage { left: 10px; }
+    .GalleryContentSubPage #nextImage { right: 10px; }
+    .GalleryContentSubPage .close {
+        right: 20px;
+    }
+
+
+
+
+
+
+    /** Services **/
+    .ServicesPage .Services .service-item .contentLinksItemServices a {
+        display: none;
+    }
+    .ServicesPage .Services .service-item {
+        padding: 0!important;
+        background: transparent!important;
+        margin-bottom: 50px;
+    }
+    .ServicesPage .Services .service-item svg {
+        width: 8px!important;
+        height: 8px!important;
+        padding: 10px!important;
+        position: absolute;
+        right: -3px;
+        top: 50%;
+        transform: translate(-10px, -50%);
+    }
+
+    .ServicesPage .Services .service-item h6 {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        padding: 0;
+        text-align: center;
+    }
+
+     .ServicesPage .Services .service-item img {
+        max-width: 100%;
+    }
+
+    /* Panels */
+    body:has(.ServicesPage) {
+        background-color: #1A1A1A;
+    }
+    .ServicesPage .Services .services-grid {
+        margin: 10px 8px;
+    }
+    .ServicesPage .Services .services-grid .service-item {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    .ServicesPage .Services .services-grid .service-item .ContentItemsLinkServices {
+        gap: 0;
+        justify-content: center;
+        position: relative;
+    }
+    .ServicesPage .Services .services-grid .service-item .ContentItemsLinkServices img {
+        width: 100%;
+        border-radius: 15px;
+        cursor: pointer;
+        height: 148px;
+        object-fit: cover;
+    }
+    .ServicesPage .Services .service-item a {
+        order: 2;
+    }
+    /* Full */
+    .ServicesPage .Services .service-full {
+        background: none!important;
+        padding: 0;
+    }
+    .ServicesPage .Services .service-full .service-item {
+        display: grid;
+        position: relative;
+    }
+    .ServicesPage .Services .service-full .service-item .img-link-mobile {
+        order: 2;
+    }
+    .ServicesPage .Services .service-full .service-item img {
+        width: 100%;
+    }
+    .ServicesPage .Services .service-full .service-item svg {
+        transform: none;
+        top: 52%;
+    }
+
+
+
+    /** Single Service **/
+    .SingleServicesPage .gallery {
+        grid-template-columns: 1fr 1fr!important;
+    }
+    .SingleServicesPage .gallery .contenido {
+        padding: 13px 11px;
+        font-size: 11px;
+        line-height: 19px;
+    }
+    .SingleServicesPage .gallery img {
+        height: 200px;
+    }
+    .SingleServicesPage .modal {
+        height: 62%;
+    }
+    .SingleServicesPage .modal-content {
+        width: 100%;
+        height: auto;
+    }
+    .SingleServicesPage #prevImage { left: 10px; }
+    .SingleServicesPage #nextImage { right: 10px; }
+    .SingleServicesPage .close { right: 20px; }
+
+
+
+
+    /** Equipament Page **/
+    .EquipmentContentSubPage .Equipment {
+        width: 100%;
+    }
+    .EquipmentContentSubPage .Equipment .itemsEquipment {
+        background: transparent;
+        padding: 20px 0;
+        margin-bottom: 10px;
+    }
+    .EquipmentContentSubPage .Equipment .itemsEquipment h4 {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0 13px;
+    }
+
+    .EquipmentContentSubPage .Equipment .itemsEquipment .contentEquipment {
+        display: grid;
+    }
+    .EquipmentContentSubPage .Equipment .itemsEquipment .contentEquipment img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .EquipmentContentSubPage .Equipment .itemsEquipment .contentEquipmentItems {
+        font-size: 15px;
+        line-height: 20px;
+        padding: 0 13px;
+    }
+
+
+    /** FAQ Page **/
+    .FAQContentSubPage .Questions {
+        margin: 50px auto;
+        width: 90%;
+    }
+    .FAQContentSubPage .Questions .itemsQuestions h4 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .FAQContentSubPage .Questions .itemsQuestions .contentQuestions h6 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .FAQContentSubPage .Questions .itemsQuestions .contentQuestions .contentQuestionsItems, .FAQContentSubPage .Questions .itemsQuestions .contentQuestions .subAnswerItems .subAnswercontent {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    /** About Page **/
+    .AboutContentSubPage .About {
+        margin: 50px auto;
+        width: 90%;
+    }
+    .AboutContentSubPage .About .TitleAbout {
+        font-size: 30px;
+        line-height: 24px;
+    }
+    .AboutContentSubPage .About .subContentAbout, .AboutContentSubPage .About .contentAbout {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .AboutContentSubPage .About .contentAbout ul {
+        grid-template-columns: 1fr!important;
+        gap: 9px;
+    }
+
+
+
+    /* Materials Page */
+    body:has(.HeroMaterialsPage) {
+        background-color: #1A1A1A;
+    }
+    .HeroMaterialsPage .contentHero {
+        top: 50%;
+    }
+    .MaterialsContentSubPage .ListMaterials .itemListMaterials p, .MaterialsContentSubPage .ListMaterials .itemListMaterials span, .MaterialsContentSubPage .contentMoreInfo p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+
+
+    /* Contact Page */
+    body:has(.ContactContentSubPage) {
+        background-color: #1A1A1A;
+    }
+    .ContactContentSubPage {
+        margin: 52px auto;
+        width: 90%;
+    }
+    .ContactContentSubPage .mainContentContactPage {
+        grid-template-columns: 1fr;
+    }
+    .ContactContentSubPage .mainContentContactPage .firstpartcontentcontactPage p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .contactsform .nameInputForm .ContentInputNameForm {
+        display: grid;
+        gap: 0;
+    }
+
+    
+}
